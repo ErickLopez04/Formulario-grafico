@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Gráficos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Generador de Gráficos</h1>
+        </header>
+        
+        <div class="main-content">
+            <div class="form-section">
+                <form id="chartForm">
+                    <div class="form-group">
+                        <label for="chartType">Tipo de Gráfico</label>
+                        <select id="chartType" name="chartType" required>
+                            <option value="bar">Barras</option>
+                            <option value="line">Líneas</option>
+                            <option value="pie">Circular</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dataInput">Datos (mes:valor, mes:valor)</label>
+                        <textarea id="dataInput" name="dataInput" rows="4" required>Enero:12000, Febrero:19000, Marzo:8000, Abril:15000</textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Generar Gráfico</button>
+                </form>
+            </div>
+            
+            <div class="chart-section">
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
